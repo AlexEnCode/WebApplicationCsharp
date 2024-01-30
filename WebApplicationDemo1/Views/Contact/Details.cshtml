@@ -1,31 +1,24 @@
-﻿@{
-    ViewData["Title"] = "CONTACT";
-    NewContact nouveauContact = new("Jean", "Pleutre", "jp@oui.com");
-    ViewData["Nouveau Contact"] = nouveauContact;
+﻿@model List<Contact>
+@{
+	ViewData["Title"] = "CONTACT";
+
 }
 
-<h1 class="display-4">regarde des contacts!!!</h1>
+<h1 class="display-4">Recherchez un contact :</h1>
 
 
 <body>
-    <table class="table table-sm">
-        <thead>
-            <tr>
-                <th scope="col">Nom</th>
-                <th scope="col">Prenom</th>
-                <th scope="col">Email</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>@nouveauContact.Nom</td>
-                <td>@nouveauContact.Prenom</td>
-                <td>@nouveauContact.Email</td>
-            </tr>
-        </tbody>
-    </table>
+	<div>
 
+		<br><br><br>
+		<form id="rechercheForm" method="get" action="/Contact/FindByID">
+			
+			<label for="rechercheid">ID:</label>
+			<br><br />
+			<input type="text" id="rechercheid" name="rechercheid" placeholder="Entrez l'ID">
+			<br><br />
+			<button type="submit">Rechercher</button>
+		</form>
+
+	</div>
 </body>
-
-
-

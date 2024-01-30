@@ -1,28 +1,36 @@
 ﻿@{
-    ViewData["Title"] = "CONTACT";
+	ViewData["Title"] = "CONTACT";
 }
 
-<h1 class="display-4">Ajoute des contacts!!!</h1>
-
+<h1 class="display-4">Ajoute des contacts : </h1>
+<br />
+<br />
+<br />
+<br />
 <body>
-<div >
-    <div >
-        <br><br><br>
-        <label>Nom:</label>
-            <br>
-        <input type="text" >
-        <br><br><br>
-        <label>Prénom:</label>
-            <br>
-        <input type="text" >
-        <br><br><br>
-        <label>Email:</label>
-            <br>
-        <input type="text" >
-        <br><br><br>
+	<div>
 
-    </div>
+		<form id="addForm" method="get" action="/Contact/addContact">
 
-    <button id="ajouterPersonne">Ajouter une personne</button>
+			<label for="addnom">Nom :</label>
+			<br />
+			<input type="text" id="addnom" name="addnom" placeholder="Votre nom">
+
+			<br /><br /><br />
+
+			<label for="addprenom">Prenom :</label>
+			<br />
+			<input type="text" id="addprenom" name="addprenom" placeholder="Votre prenom">
+
+			<br /><br /><br />
+
+			<label for="addemail">Email :</label>
+			<br />
+			<input type="text" id="addemail" name="addemail" placeholder="Votre Email">
+
+			<br /><br /><br />
+			<button type="submit">Enregistrer</button>
+		</form>
 	</div>
+
 </body>

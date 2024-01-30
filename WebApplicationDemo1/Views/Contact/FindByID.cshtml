@@ -1,0 +1,24 @@
+﻿@model Contact
+@{
+	ViewData["Title"] = "Recherche";
+	Contact contact = Model;
+}
+
+<h1>Vous recherchez :</h1>
+
+<div class="card" style="width: 18rem;">
+	<img class="card-img-top" src="https://thispersondoesnotexist.com/" alt="Card image cap">
+	<div class="card-body">
+
+
+		@{
+			<h5 class="card-title"> @contact.Nom @contact.Prenom</h5>
+		<p class="card-text">
+				<td>@contact.Id</td>
+				<td>@contact.Email</td>	
+		</p>}
+		<br /><br /><br />
+		<a href="/home" class="btn btn-primary">Menu</a>
+	</div>
+</div>
+

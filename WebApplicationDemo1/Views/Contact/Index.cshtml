@@ -1,24 +1,35 @@
-﻿@{
+﻿@model List<Contact>
+@{
 	ViewData["Title"] = "CONTACT";
+
 }
 
-<h1 class="display-4">Regarde les contact!!!</h1>
-
-<h2>Liste des Contacts</h2>
-
-
-<head>
-
-</head>
+<h1 class="display-4">regarde des contacts!!!</h1>
 
 
 <body>
-	<ul>
-		<li>Nom </li>
-		<li>Email</li>
-		<li>Action</li>
-	</ul>
+	<table class="table table-sm">
+		<thead>
+			<tr>
+				<th scope="col">Id</th>
+				<th scope="col">Nom</th>
+				<th scope="col">Prenom</th>
+				<th scope="col">Email</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			@{
+				foreach (var contact in Model)
+			{
+				<tr>
+					<td>@contact.Id</td>
+					<td>@contact.Nom</td>
+					<td>@contact.Prenom</td>
+					<td>@contact.Email</td>
+				</tr>
+			}}
+		</tbody>
+	</table>
 
 </body>
-
-
